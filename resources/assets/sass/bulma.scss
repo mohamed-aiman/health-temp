@@ -1,0 +1,26 @@
+@import "~font-awesome/scss/font-awesome.scss";
+@import "~bulma/sass/utilities/initial-variables.sass";
+@import "~bulma/sass/utilities/functions";
+//$primary:#ffb3b3;
+
+$radius:0px !important;
+//$input-radius:0px !important;
+$box-radius:0px !important;
+//$box-background-color:$red !important;
+
+//Setup your Custom Colors
+$orange:orange;
+$orange-invert: findColorInvert($orange);
+$purple:purple;
+$purple-invert: findColorInvert($purple);
+
+//Add new color variables to the color map.
+@import "~bulma/sass/utilities/derived-variables";
+$addColors: (
+  "orange":($orange, $orange-invert),
+  "purple":($purple, $purple-invert),
+);
+$colors: map-merge($colors, $addColors);
+
+@import "~bulma";
+@import "~bulma-calendar/dist/css/bulma-calendar.min.css";
